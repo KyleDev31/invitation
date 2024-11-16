@@ -1,0 +1,103 @@
+/* Style for the floating hearts */
+.heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 2rem;
+    color: red;
+    animation: floatUp 4s linear infinite;
+    pointer-events: none; /* Prevent hearts from blocking interaction */
+}
+
+/* Heart animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Global body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Landing page section styling */
+.landing-page {
+    text-align: center;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6f4c3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5b3e31;
+}
+
+/* Mail background container */
+.mail-background {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Heading styling */
+.mail-background h2 {
+    color: #6f4c3e;
+}
+
+/* Responsive Layout for Tablets and Smaller Screens */
+@media screen and (max-width: 768px) {
+    .mail-background {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .heart {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive Layout for Mobile Devices */
+@media screen and (max-width: 480px) {
+    .mail-background {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+    }
+}
